@@ -8,7 +8,7 @@
  *    完成时间：2015/08/27
  *
  */
-namespace Frame;
+namespace Core;
 
 class Hook{
     static $tags = array();//标签数组，是一个二维数组，键名就是标签名，键值就是添加到这个标签上的行为集合数组
