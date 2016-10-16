@@ -8,7 +8,7 @@
  *    完成时间：2015/08/25
  * 
  */
-namespace Frame;
+namespace Core;
 
 class Page{
     
