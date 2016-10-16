@@ -8,8 +8,8 @@
  *    完成时间：2015/08/14
  *
  */
-namespace Frame;
-use Frame\Db;
+namespace Core;
+use Core\Db;
 
 class Model{
     const MODEL_INSERT         = 1;
@@ -639,7 +639,7 @@ class Model{
      * 赋值查询条件
      * @param mixed $where   条件表达式
      * @param mixed $param   参数
-     * @return \Frame\Model
+     * @return \Core\Model
      */
     public function where($where,$param=null){
         if(!is_null($param) && is_string($where)){
@@ -668,7 +668,7 @@ class Model{
      * 指定SQL语句 字段名
      * @param unknown $field
      * @param string $except
-     * @return \Frame\Model
+     * @return \Core\Model
      */
     public function field($field, $except=false){
         if(true === $field){
@@ -704,7 +704,7 @@ class Model{
      * 指定查询数量
      * @param unknown $offset
      * @param string $length
-     * @return \Frame\Model
+     * @return \Core\Model
      */
     public function limit($offset,$length=null){
         $this->options['limit'] =   is_null($length)?$offset:$offset.','.$length;
@@ -714,7 +714,7 @@ class Model{
      * 指定分页
      * @param unknown $page
      * @param string $listRows
-     * @return \Frame\Model
+     * @return \Core\Model
      */
     public function page($page,$listRows=null){
         $this->options['page'] = is_null($listRows)? $page : $page.','.$listRows;
