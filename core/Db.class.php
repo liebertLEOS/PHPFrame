@@ -8,7 +8,7 @@
  *    完成时间：2015/08/14
  *
  */
-namespace Frame;
+namespace Core;
 
 abstract  class Db{
     // 数据库操作对象资源池
@@ -29,7 +29,7 @@ abstract  class Db{
             // 解析配置数组
             $option = self::parseConfig($config);
             // 得到类全名
-            $class = 'Frame\\Driver\\DB\\' . ucwords(strtolower($option['type']));
+            $class = 'Core\\Driver\\DB\\' . ucwords(strtolower($option['type']));
             // 类文件是否存在，系统自动调用auto_load函数去加载类文件
             if (class_exists($class)) {
                 // 实例化一个对象
