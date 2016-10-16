@@ -48,7 +48,7 @@ function E($str){
  */
 function M($name='', $tablePrefix='', $connection=''){
     static $_model  = array();
-    $class = 'Frame\\Model';
+    $class = 'Core\\Model';
     $id           =   (is_array($connection)?implode('',$connection):$connection).$tablePrefix . $name;
     if(!isset($_model[$id])){
         $_model[$id] = new $class($name,$tablePrefix,$connection);
