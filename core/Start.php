@@ -13,8 +13,8 @@
 require_once 'function.php';
 require_once 'Tools.class.php';
 
-use Frame\Tools;
-use Frame\Hook;
+use Core\Tools;
+use Core\Hook;
 
 //定义系统根目录
 defined('SYS_PATH')           or define('SYS_PATH', substr(dirname(__FILE__).'\\', 0, -6));
@@ -23,7 +23,7 @@ defined('APP_NAME')           or define('APP_NAME', 'App');
 //定义应用存放目录
 defined('APP_PATH')           or define('APP_PATH', SYS_PATH.APP_NAME.'\\');
 //定义框架库目录
-defined('FRAME_PATH')         or define('FRAME_PATH',SYS_PATH.'Frame\\');
+defined('FRAME_PATH')         or define('FRAME_PATH',SYS_PATH.'Core\\');
 //定义框架库配置目录
 defined('CONF_PATH')          or define('CONF_PATH',FRAME_PATH.'Conf\\');
 //定义视图目录,也就是模板存放目录
@@ -41,7 +41,7 @@ defined('HTML_FILE_SUFFIX')   or define('HTML_FILE_SUFFIX', 'html');
 spl_autoload_register('autoload');
 function autoload($class){
     $name = strstr($class, '\\', true);
-    //如果是系统框架(Frame)下类文件，否则加载应用目录(APP_PATH)下的类文件
+    //如果是系统框架(Core)下类文件，否则加载应用目录(APP_PATH)下的类文件
     if(in_array($name, array('Frame')) || is_dir(SYS_PATH.$name)){
         $class = SYS_PATH.$class.'.class.php';
     }else {
