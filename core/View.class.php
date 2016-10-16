@@ -8,8 +8,8 @@
  *    完成时间：2015/08/14
  *
  */
-namespace Frame;
-use Frame\Tools;
+namespace Core;
+use Core\Tools;
 
 class View{
     
