@@ -1,5 +1,5 @@
 <?php
-namespace Frame;
+namespace Core;
 
 class Verifycode{
     protected    $height      = '50';
