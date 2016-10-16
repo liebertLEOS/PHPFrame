@@ -9,9 +9,9 @@
  *    修　　改：2015/08/26 增加了ajaxReturn，处理客户端的异步请求
  *
  */
-namespace Frame;
+namespace Core;
 
-use Frame\Tools;
+use Core\Tools;
 
 /*
  * Frame框架控制器基类，接口
@@ -34,7 +34,7 @@ abstract class Controller
      * */
     public function __construct()
     {
-        $this->view = Tools::instance('Frame\View');//实例化视图类View
+        $this->view = Tools::instance('Core\View');//实例化视图类View
         $this->_initialize();
     }
 
